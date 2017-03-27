@@ -23,25 +23,19 @@ public class ListaDoacoesRVAdapter extends RecyclerView.Adapter<ListaDoacoesRVAd
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.card_layout,parent,false);
-
-        ViewHolder viewHolder = new ViewHolder(view);
-
-        return viewHolder;
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Doacao doacao = this.doacaoList.get(position);
-
         holder.tvDoacaoNome.setText(doacao.getNomeDoador());
-        holder.tvDoacaoNBolsas.setText(doacao.getN_bolsas());
+        holder.tvDoacaoNBolsas.setText(String.format(context.getString(R.string.numero_bolsas), doacao.getN_bolsas()));
         holder.tvDoacaoHora.setText(doacao.getHora_doacao());
         holder.tvDoacaoData.setText(doacao.getDt_doacao());
         holder.tvDoacaoTipoSangue.setText(doacao.getTipoSanguineo());
-
     }
 
     @Override

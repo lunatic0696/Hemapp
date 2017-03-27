@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Hemapp</string>
+    <string name="numero_bolsas">Número de bolsas: %d</string>
 </resources>

@@ -11,13 +11,15 @@ import java.util.ArrayList;
 
 public class Doacao extends SugarRecord{
 
-    protected Doador doador;
-    protected int n_bolsas;
-    protected String dt_doacao;
-    protected String hora_doacao;
-    protected String campanha;
-    protected String alvonome;
-    protected String alvohosp;
+    private Doador doador;
+    private int n_bolsas;
+    private String dt_doacao;
+    private String hora_doacao;
+    private String campanha;
+    private String alvonome;
+    private String alvohosp;
+
+    public Doacao(){}
 
     public Doacao(Doador doador, int n_bolsas, String dt_doacao, String hora_doacao, String campanha, String alvonome, String alvohosp) {
         this.doador = doador;
@@ -30,11 +32,11 @@ public class Doacao extends SugarRecord{
     }
 
     public String getTipoSanguineo(){
-        return this.doador.tipo_sanguineo_doador;
+        return this.doador.getTipo_sanguineo_doador();
     }
 
     public String getNomeDoador(){
-        return this.doador.nome_doador;
+        return this.doador.getNome_doador();
     }
 
     public Doador getDoador() {
