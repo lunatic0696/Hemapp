@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Hemapp</string>
-    <string name="numero_bolsas">Número de bolsas: %d</string>
+    <string name="numero_bolsas">%d</string>
+    <string name="adicionr_doador">Adicionar Doador</string>
+    <string-array name="opcoes">
+        <item>Doadores</item>
+        <item>Estoque de bolsas</item>
+        <item>Campanhas</item>
+    </string-array>
 </resources>

@@ -32,5 +32,8 @@ dependencies {
     compile "com.android.support:design:${supportLibraryVersion}"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.satyan:sugar:1.5'
+    compile('com.mikepenz:materialdrawer:5.8.2@aar') {
+        transitive = true
+    }
     testCompile 'junit:junit:4.12'
 }
