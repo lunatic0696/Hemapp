@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -7,17 +7,20 @@
     android:layout_height="match_parent"
     tools:context="lunatic.hemapp.DoadoresActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lista de doadores"
-        android:textSize="30dp"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/cardview_dark_background"/>
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/doadores_recycler"
+        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     </android.support.v7.widget.RecyclerView>
 
-</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_input_add"
+        android:onClick="addDoadorForm"/>
+
+</android.support.design.widget.CoordinatorLayout>

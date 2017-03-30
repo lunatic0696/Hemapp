@@ -1,55 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/cardview_light_background"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="8dp"
+    android:layout_margin="6dp"
     android:padding="8dp">
-
     <LinearLayout
-        android:layout_weight="3"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:padding="4dp"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@color/cardview_dark_background"
-            android:text="Nome" />
+            android:padding="4dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvNome_Doador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/cardview_dark_background"
+                android:text="Nome" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Endereço:"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="E-mail:"/>
+            <TextView
+                android:id="@+id/tvEmail_Doador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail:"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_Tipo_Sangue_Doador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo sanguíneo"/>
+
+            <TextView
+                android:id="@+id/tvN_doacoes_Doador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vezes que doou"/>
+            <TextView
+                android:id="@+id/tvNBolsas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total de bolsas"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_weight="2"
-        android:layout_width="0dp"
-        android:orientation="vertical"
-        android:padding="8dp"
-        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tipo sanguíneo"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Vezes que doou"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Total de bolsas"
-            />
-
-    </LinearLayout>
-
-</LinearLayout>
+</android.support.v7.widget.CardView>

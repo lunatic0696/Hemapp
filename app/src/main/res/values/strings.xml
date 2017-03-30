@@ -1,10 +1,38 @@
 <resources>
     <string name="app_name">Hemapp</string>
+    <string name="Title_Doadores">Doadores</string>
+    <string name="Title_Top_Doadores">Top Doadores</string>
+    <string name="Title_Campanhas">Campanhas</string>
     <string name="numero_bolsas">%d</string>
+    <string name="numero_doacoes">%d</string>
     <string name="adicionr_doador">Adicionar Doador</string>
-    <string-array name="opcoes">
-        <item>Doadores</item>
-        <item>Estoque de bolsas</item>
-        <item>Campanhas</item>
+    <string name="tiposangue_text">Tipo Sanguíneo</string>
+    <string name="telefone_text">Telefone</string>
+    <string name="Endereco_text">Endereço</string>
+    <string name="menu_Doacoes">Doações</string>
+    <string name="menu_Doadores">Doadores</string>
+    <string name="menu_Estoque">Estoque de Bolsas</string>
+    <string-array name="sexo_array">
+        <item>Masculino</item>
+        <item>Feminino</item>
     </string-array>
+    <string-array name="tiposangue_array">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+    <string name="sexo_M">Masculino</string>
+    <string name="sexo_F">Feminino</string>
+    <string name="sexo_text">Sexo</string>
+    <string name="nome_doador">Nome</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="menu_Campanhas">Campanhas</string>
+    <string name="menu_Top_Doadores">Top Doadores</string>
+    <string name="CPF_text">CPF</string>
+
 </resources>

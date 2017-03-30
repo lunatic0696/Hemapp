@@ -23,16 +23,24 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="lunatic.hemapp.Model" />
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DoadoresActivity" />
+        <activity
+            android:name=".DoadoresActivity"
+            android:label="@string/Title_Doadores" />
         <activity android:name=".TopDoadoresActivity" />
-        <activity android:name=".DoacaoActivity"></activity>
+        <activity android:name=".DoacaoActivity" />
+        <activity android:name=".AddDoadorFormActivity" />
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
