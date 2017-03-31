@@ -31,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
         DrawerUtils.makeDrawer(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         initRecyclerView();
     }
 
@@ -43,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.fab)
     public void addDoacao() {
-        Intent novaDoacaoIntent = new Intent(MainActivity.this,AddDoadorFormActivity.class);
-        startActivity(novaDoacaoIntent);
+        Intent addDoacao = new Intent(MainActivity.this,AddDoacaoFormActivity.class);
+        startActivity(addDoacao);
     }
 
 }

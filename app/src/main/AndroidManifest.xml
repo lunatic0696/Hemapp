@@ -28,19 +28,27 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".DoadoresActivity"
             android:label="@string/Title_Doadores" />
-        <activity android:name=".TopDoadoresActivity" />
-        <activity android:name=".DoacaoActivity" />
-        <activity android:name=".AddDoadorFormActivity" />
         <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:name=".TopDoadoresActivity"
+            android:label="@string/Title_Top_Doadores" />
+        <activity
+            android:name=".AddDoacaoFormActivity"
+            android:label="@string/Title_Nova_Doacao" />
+        <activity
+            android:name=".AddDoadorFormActivity"
+            android:label="@string/Title_Novo_doador" />
+        <activity
+            android:name=".CampanhasActivity"
+            android:label="@string/Title_Campanhas" />
+        <activity android:name=".AddCampanhaFormActivity" />
+        <activity android:name=".DoadorDetalheActivity"></activity>
     </application>
 
 </manifest>

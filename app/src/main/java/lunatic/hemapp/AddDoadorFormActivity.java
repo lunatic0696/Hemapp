@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,8 +31,7 @@ public class AddDoadorFormActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.addDoadorButton)
-    public void addDoador(){
+    public void addDoador() {
         String novoNome = edNome.getText().toString();
         String novoEmail = edEmail.getText().toString();
         String novoEndereco = edEndereco.getText().toString();
@@ -37,7 +39,15 @@ public class AddDoadorFormActivity extends AppCompatActivity {
         String novoCPF = edCPF.getText().toString();
         String novoSexo = spinnerSexo.getSelectedItem().toString();
         String novoTipoSangue = spinnerTipoSangue.getSelectedItem().toString();
-        Doador novoDoador = new Doador(novoNome,novoSexo,novoTipoSangue,novoEmail,novoCPF,novoTelefone,0,0,novoEndereco,"Nunca doou");
-        novoDoador.save();
+        if (Objects.equals(novoNome, "") || Objects.equals(novoEmail, "") || Objects.equals(novoEndereco, "") || Objects.equals(novoTelefone, "")
+                || Objects.equals(novoCPF, "") || Objects.equals(novoSexo, "") || Objects.equals(novoTipoSangue, "")) {
+            Toast.makeText(this, R.string.complete_data, Toast.LENGTH_LONG).show();
+        } else {
+            Doador novoDoador = new Doador(novoNome, novoSexo, novoTipoSangue, novoEmail, novoCPF, novoTelefone, 0, 0, novoEndereco, "Nunca doou");
+            novoDoador.save();
+            Toast.makeText(this, R.string.success,Toast.LENGTH_LONG).show();
+            finish();
+
+        }
     }
 }

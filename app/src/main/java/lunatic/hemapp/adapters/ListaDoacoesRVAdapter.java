@@ -1,11 +1,15 @@
 package lunatic.hemapp.adapters;
 
 import android.content.Context;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -29,13 +33,42 @@ public class ListaDoacoesRVAdapter extends RecyclerView.Adapter<ListaDoacoesRVAd
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        Doacao doacao = this.doacaoList.get(position);
+    public void onBindViewHolder(ViewHolder holder, final int position) {
+        final Doacao doacao = this.doacaoList.get(position);
         holder.tvDoacaoNome.setText(doacao.getNomeDoador());
         holder.tvDoacaoNBolsas.setText(String.format(context.getString(R.string.numero_bolsas), doacao.getN_bolsas()));
         holder.tvDoacaoHora.setText(doacao.getHora_doacao());
         holder.tvDoacaoData.setText(doacao.getDt_doacao());
         holder.tvDoacaoTipoSangue.setText(doacao.getTipoSanguineo());
+
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener(
+
+        ) {
+            @Override
+            public boolean onLongClick(View view) {
+                PopupMenu pop = new PopupMenu(context, view);
+                MenuInflater inflater = pop.getMenuInflater();
+
+                inflater.inflate(R.menu.popup_menu_lista, pop.getMenu());
+                pop.show();
+
+                pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        if (item.getItemId() == R.id.remover_pop_text){
+                            doacao.delete();
+
+                            ListaDoacoesRVAdapter.this.notifyItemRemoved(position);
+                            Toast.makeText(context,context.getString(R.string.removido_text),Toast.LENGTH_LONG).show();
+                        }
+
+                        return false;
+                    }
+                });
+
+                return true;
+            }
+        });
     }
 
     @Override
@@ -69,5 +102,7 @@ public class ListaDoacoesRVAdapter extends RecyclerView.Adapter<ListaDoacoesRVAd
         this.context = context;
         this.doacaoList = doacoes;
     }
+
+
 
 }

@@ -5,22 +5,20 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="lunatic.hemapp.DoadoresActivity">
+    tools:context="lunatic.hemapp.CampanhasActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/doadores_recycler"
+        android:id="@+id/rv_campanhas"
         android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"
+        ></android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_doadorFab"
+        android:id="@+id/add_campanha_fab"
+        android:layout_gravity="bottom|end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_gravity="bottom|end"
-        android:src="@android:drawable/ic_input_add" />
+        android:src="@android:drawable/ic_input_add"/>
 
 </android.support.design.widget.CoordinatorLayout>

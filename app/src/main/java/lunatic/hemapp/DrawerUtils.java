@@ -25,7 +25,8 @@ public class DrawerUtils {
         SecondaryDrawerItem item2 = new SecondaryDrawerItem().withIdentifier(2).withName(R.string.menu_Doadores);
         SecondaryDrawerItem item3 = new SecondaryDrawerItem().withIdentifier(3).withName(R.string.menu_Top_Doadores);
         SecondaryDrawerItem item4 = new SecondaryDrawerItem().withIdentifier(4).withName(R.string.menu_Campanhas);
-        SecondaryDrawerItem item5 = new SecondaryDrawerItem().withIdentifier(5).withName(R.string.menu_Doadores);
+        SecondaryDrawerItem item5 = new SecondaryDrawerItem().withIdentifier(5).withName(R.string.estoque_menu_text);
+        SecondaryDrawerItem item6 = new SecondaryDrawerItem().withIdentifier(6).withName(R.string.hospital_text);
 
         DrawerBuilder builder = new DrawerBuilder()
                 .withActivity(activity)
@@ -45,9 +46,12 @@ public class DrawerUtils {
                                                    @Override
                                                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                                                        if (position == 2){
-                                                           Snackbar.make(activity.findViewById(R.id.main_doacoes_recycler),"Paçoca",Snackbar.LENGTH_LONG).show();
                                                            Intent menuToDoadores = new Intent(activity, DoadoresActivity.class);
                                                            activity.startActivity(menuToDoadores);
+                                                       }
+                                                       else if(position == 4){
+                                                           Intent menuToCampanhas = new Intent(activity, CampanhasActivity.class);
+                                                           activity.startActivity(menuToCampanhas);
                                                        }
                                                        return false;
                                                    }

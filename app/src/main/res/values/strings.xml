@@ -12,6 +12,7 @@
     <string name="menu_Doacoes">Doações</string>
     <string name="menu_Doadores">Doadores</string>
     <string name="menu_Estoque">Estoque de Bolsas</string>
+    <string name="n_bolsas_text">Número de Bolsas</string>
     <string-array name="sexo_array">
         <item>Masculino</item>
         <item>Feminino</item>
@@ -34,5 +35,22 @@
     <string name="menu_Campanhas">Campanhas</string>
     <string name="menu_Top_Doadores">Top Doadores</string>
     <string name="CPF_text">CPF</string>
+    <string name="complete_data">Por favor, complete os dados</string>
+    <string name="success">Dados enviados com sucesso</string>
+    <string name="doador_text">Doador</string>
+    <string name="campanha_text">Campanha</string>
+    <string name="hora_doacao_text">Hora</string>
+    <string name="data_doacao_text">Data</string>
+    <string name="registrar_doacao">Registrar doação</string>
+    <string name="estoque_menu_text">Estoque</string>
+    <string name="hospital_text">Sobre o hospital</string>
+    <string name="Title_Nova_Doacao">Nova Doaçao</string>
+    <string name="Title_Novo_doador">Novo Doador</string>
+    <string name="alvo_text">Alvo (Hospital ou Paciente específico)</string>
+    <string name="nome_campanha_text">Nome da Campanha</string>
+    <string name="descricao_text">Descrição</string>
+    <string name="Title_nova_campanha">Nova Campanha</string>
+    <string name="remover_pop_text">Remover?</string>
+    <string name="removido_text">Removido.</string>
 
 </resources>

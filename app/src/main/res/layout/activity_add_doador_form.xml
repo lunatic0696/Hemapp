@@ -83,10 +83,4 @@
         android:layout_height="wrap_content"
         android:entries="@array/sexo_array"></Spinner>
 
-    <Button
-        android:id="@+id/addDoadorButton"
-        android:text="@string/adicionr_doador"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
 </LinearLayout>

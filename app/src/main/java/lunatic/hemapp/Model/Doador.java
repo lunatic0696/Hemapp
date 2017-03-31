@@ -72,4 +72,9 @@ public class Doador extends SugarRecord {
     public String getDt_ultima_doacao() {
         return dt_ultima_doacao;
     }
+
+    @Override
+    public String toString() {
+        return this.nome_doador + " " + this.tipo_sanguineo_doador;
+    }
 }
